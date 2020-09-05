@@ -1,0 +1,22 @@
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm install wordpress bitnami/wordpress \
+  --set mariadb.enabled=false \
+  --set externalDatabase.host=dbmaster.ckw1ddumtncz.ap-southeast-1.rds.amazonaws.com \
+  --set externalDatabase.user=root \
+  --set externalDatabase.password=vhico123 \
+  --set externalDatabase.database=wordpress \
+  --set externalDatabase.port=3306 \
+  --set service.type=ClusterIP \
+  --set ingress.enabled=true \
+  --set ingress.certManager=false \
+  --set ingress.annotations."kubernetes\.io/ingress\.class"=nginx \
+  --set ingress.hostname=as-blog.gonnabegood.xyz
+
+  eyJhbGciOiJSUzI1NiIsImtpZCI6IiJ9.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJrdWJlcm5ldGVzLWRhc2hib2FyZCIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VjcmV0Lm5hbWUiOiJhZG1pbi11c2VyLXRva2VuLXZxbjI3Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6ImFkbWluLXVzZXIiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC51aWQiOiI3ZWEyNzk0NC03MDhkLTQxOTMtYTliZi0zNTljZTk0ODZlMTciLCJzdWIiOiJzeXN0ZW06c2VydmljZWFjY291bnQ6a3ViZXJuZXRlcy1kYXNoYm9hcmQ6YWRtaW4tdXNlciJ9.XbDxjwyMOY8HWwBhQMEwBsE2w_CwQIPiyI2EYynmtwUARAlgHugQu6D79cUwutGxg8t4HF1dXctnowmxGNJcrRhZ77AJ9-BC_giw5oebw0Xob_5tUt-EomM6WgzaG743x0XnuKSJVTmsVASltrmWXhwVO_7Rij57JvA_kzcfLk8iT4fDddbcQV-pZjhBnziR0BGs77rLIdw1-G7c81RuIK9WxiWvmftxxfoQ_a7O-eNZJYtHAp1c6qLdWcRUi6VUY7Wh-CVgSacHh7XFLpgiYCwfVgkrpYzzY56vCM5JI3xY3nTOm3fX8sEWwoZiUYfqsoZsPx0Y99uAx-Ljr_CCOg
+
+prod wordpress
+user
+7DjkP8SaRR
+
+stag wordpress
+wAZKw5xZDD
